@@ -1,0 +1,9 @@
+update_textpreso_transgene.pl
+/postgres/work/pgpopulation/textpresso/transgene/update_textpreso_transgene.pl*	 - populates postgres with the results of Arun's transgene pattern matching script track down this script??? 
+- adds new Is/In transgenes and new paper connections to pre-existing ones. 
+Input: C.elegans corpus 
+Input: /home/postgres/work/pgpopulation/textpresso/transgene/Obsolete.Tg.txt (no longer needed with switch to OA) 
+Note: Obsolete.Tg.txt was manually edited to store false transgene objects and paper connections that were picked up by Arun's pattern matching scripts. Obsolete objects are now tagged as 'Fails' so they will not be entered into the transgene table again as they will always be picked up by Arun's script. 
+Output: postgres transgene table   
+Runs: every morning, 4am; the textpresso transgene table is wiped clean during each run and repopulated 
+Written by: Juancarlos
